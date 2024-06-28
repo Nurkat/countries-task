@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country</title>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+    </style>
+</head>
+<body>
+    
+  <header class="py-5 shadow-md">
+    <div class="container mx-auto w-[1300px] flex items-center justify-between">
+      <a class="font-bold text-[30px]" href="/">Countries</a>
+      <div class="flex items-center gap-5">
+        <button class="w-[50px] h-[50px] border-[1px] border-red-400 text-red-400 rounded-[50%] flex items-center	justify-center">
+          0
+          <img src="images/like.svg" alt="Like icon" width="25" height="25">
+        </button>
+        <button class="w-[50px] h-[50px] border-[1px] border-green-400 text-green-400 rounded-[50%] flex items-center	justify-center">
+          0
+          <img src="images/save.svg" alt="Save icon" width="25" height="25">
+        </button>
+        <button class="w-[50px] h-[50px] border-[1px] border-#1C274C-400 text-#1C274C-400 rounded-[50%] flex items-center	justify-center">
+          <img src="images/moon.svg" alt="Moon icon" width="25" height="25">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="py-5">
+      <div class="container mx-auto w-[1300px]">
+        <div class="flex items-center justify-between">
+          <input class="search-input p-3 rounded-[10px] border-[1px] w-[250px]" type="text" placeholder="Searching...">
+          <select class="country-select p-3 rounded-[10px] border-[1px] w-[250px]" type="text">
+            <option>All</option>
+          </select>
+        </div>
+        <ul class="countries-list flex flex-wrap gap-10 mt-10 justify-between"></ul>
+      </div>
+    </section>
+  </main>
+
+    <script src="js/country.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+    </script>
+</body>
+</html>
